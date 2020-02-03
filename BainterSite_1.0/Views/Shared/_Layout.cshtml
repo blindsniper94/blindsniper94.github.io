@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!--Nav Start-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <!--Url.Action("View","Controller")-->
+        <a class="navbar-brand" href="@Url.Action("index","home")">Alex Bainter</a>
+        
+        @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("index","home")">Home <span class="sr-only">(current)</span></a>
+                </li>*@
+
+                <!--About Dropdown Menu Starts-->
+
+                @*<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About
+                    </a>*@
+
+                    <!--Items in Dropdown menu-->
+
+                    @*<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="@Url.Action("about","home")">About Me</a>
+                        <a class="dropdown-item" href="@Url.Action("experience","home")">My Experience</a>
+                        <a class="dropdown-item" href="@Url.Action("academics","home")">My Academics</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="@Url.Action("resume","home")">My Resume</a>
+                    </div>*@
+                <!--About Dropdown Menu Ends-->
+                @*</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("contact","home")">Contact<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>*@
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>@DateTime.Now.Year Alex Bainter</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
